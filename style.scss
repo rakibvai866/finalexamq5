@@ -1,0 +1,27 @@
+// Sass mixin example
+@mixin border-radius($radius) {
+    border-radius: $radius;
+  }
+
+  
+  // Usage of the border-radius mixin
+.element {
+    @include border-radius(10px);
+  }
+
+  // _variables.scss
+$primary-color: #007bff;
+
+// _mixins.scss
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+
+// main.scss
+@import 'variables';
+@import 'mixins';
+
+.element {
+  @include border-radius(10px);
+  background-color: $primary-color;
+}
